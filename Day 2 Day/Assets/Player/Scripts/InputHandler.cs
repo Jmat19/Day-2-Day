@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class InputHandler : MonoBehaviour
 {
-    public PlayerController CharacterController;
+    //public PlayerController CharacterController;
 
     private InputAction _moveAction, _lookAction, _jumpAction;
     void Start()
@@ -21,14 +21,14 @@ public class InputHandler : MonoBehaviour
     void Update()
     {
         Vector2 movementVector = _moveAction.ReadValue<Vector2>();
-        CharacterController.Move(movementVector);
+        //CharacterController.Move(movementVector);
 
         Vector2 lookVector = _lookAction.ReadValue<Vector2>();
-        CharacterController.Rotate(lookVector);
+       // CharacterController.Rotate(lookVector);
     }
 
     private void OnJumpPerformed(InputAction.CallbackContext context)
     {
-        CharacterController.Jump();
+       // CharacterController.Jump();
     }
 }
